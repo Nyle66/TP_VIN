@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "noImplicitAny": true,
+        "pretty":true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "rootDir":"TS",
+        "watch" : true,
+        "target": "es6",
+        /*"outDir":"JS"*/
+        "outFile":"JS/main.js"
+    }
+}
