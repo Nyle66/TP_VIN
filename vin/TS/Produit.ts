@@ -24,7 +24,7 @@ export class Produit extends Model{
         $parent.append(this.$dom);
     }
     detail($parent: JQuery): void{
-        let div: string = "<div class='detail animated fadeInLeft'><p>" + this.description + "</p><br><img src='cat.gif' id='img'/></div>";
+        let div: string = "<div class='detail animated zoomIn'><p>" + this.description + "</p><br><img src='cat.gif' id='img'/></div>";
         this.$dom = $(div);
         $parent.append(this.$dom);
     }

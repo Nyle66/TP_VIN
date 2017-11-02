@@ -20,27 +20,28 @@ $(document).on("click", ".type", function(){
 $(document).on("click", ".prod", function(){
     
     app.$vins.hide(); 
+    app.$details.children(".detail").remove();
     app.$details.show();
     app.current_produit = app.getProduitById( $(this).data('produit') as number );
     app.readDetail();
     
 });
 
-// $(document).on("click", "#backlog", function(){
+$(document).on("click", "#backlog", function(){
     
-//     app.$categories.hide(); 
-//     app.$connection.show();
+    app.$categories.hide(); 
+    app.$connection.show();
     
-// });
-// $(document).on("click", "#backcate", function(){
+});
+$(document).on("click", "#backcate", function(){
     
-//     app.$vins.hide(); 
-//     app.$categories.show();
+    app.$vins.hide(); 
+    app.$categories.show();
     
-// });
-// $(document).on("click", "#backprod", function(){
+});
+$(document).on("click", "#backprod", function(){
     
-//     app.$details.hide(); 
-//     app.$vins.show();
+    app.$details.hide(); 
+    app.$vins.show();
     
-// });
+});

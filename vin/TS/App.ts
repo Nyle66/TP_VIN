@@ -30,13 +30,14 @@ export class App{
     }
 
     displayCategories(){
-        console.log(this.$categories);
+        this.$categories.children(".type").remove();
         for(let category of this.all_categories){
              category.display(this.$categories);
         }
     }
 
     displayProduct(){
+        this.$vins.children( ".prod" ).remove();
         for(let product of this.all_product){
              product.display(this.$vins);
         }
@@ -83,7 +84,7 @@ export class App{
             method: "GET",
             dataType: "json",
             success : ( data ) => {
-                console.log(data);
+                this.all_categories = [];
                 if( data.success == true ){
                     
                     for( let element of data.category ){
@@ -112,7 +113,7 @@ export class App{
             method: "GET",
             dataType: "json",
             success : ( data ) => {
-                console.log(data);
+                this.all_product = [];
                 if( data.success == true ){
                     
                     for( let element of data.product ){ console.log(element);
@@ -178,4 +179,5 @@ export class App{
         }
         return null;
     }
+
 }
